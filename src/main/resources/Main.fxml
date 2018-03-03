@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="1024.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UIController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleOpenFile" text="Open…" />
+            <MenuItem mnemonicParsing="false" onAction="#handleOpenFromWeb" text="Load From Internet..." />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLoadSampleFromWeb" text="Load Samples From Internet" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handleSaveTextFile" text="Save Formated Text" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handlePreferences" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handleQuit" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handleCopy" text="Copy" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Delete Feed" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleRemoveDateBefore" text="Delete Items from..." />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#handleReadLater" text="Read Later" />
+                  <MenuItem fx:id="isAutoRefresh" mnemonicParsing="false" onAction="#handleRefresh" text="Auto Refresh" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleAboutMenu" text="About RSSReader" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane fx:id="splitPane" dividerPositions="0.2505567928730512, 0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="1024.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane minWidth="128.0" styleClass="background">
+          <children>
+                  <ListView fx:id="feeds" layoutY="35.0" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+          </children>
+        </AnchorPane>
+            <AnchorPane minWidth="288.0" styleClass="background">
+               <children>
+                  <ListView fx:id="items" layoutX="-36.0" layoutY="143.0" styleClass="background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <WebView fx:id="webview" minHeight="-1.0" minWidth="608.0" prefHeight="-1.0" prefWidth="-1.0" />
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label fx:id="leftStatus" maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="OK." HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" styleClass="background" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="RSSReader ver.Deep Dark Fantasy" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@ComplexApplication.css" />
+  </stylesheets>
+</VBox>

@@ -1,0 +1,15 @@
+.myDialog{
+    -fx-background-color: #1d1d1d;
+}
+.myDialog > *.button-bar > *.container{
+    -fx-background-color: #1d1d1d;
+}
+.myDialog > *.label.content{
+    -fx-text-fill: white;
+}
+.myDialog:header *.header-panel{
+    -fx-background-color: #3e3e3e;
+}
+.myDialog:header *.header-panel *.label{
+    -fx-text-fill: white;
+}

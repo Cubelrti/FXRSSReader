@@ -1,0 +1,37 @@
+body{
+    overflow-x: hidden;
+    background-color: #1f1f1f;
+    color: white;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+    font: 400 18px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+}
+
+*{
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+}
+
+span {
+    color: #b8b8b8;
+}
+a {
+    color:white;
+}
+
+img{
+    max-width:100%;
+}
+
+/* MacType-like shadowing */
+p{
+    /*text-shadow:0.05em 0.05em 0.2em #ffffff !important;*/
+    -webkit-font-smoothing: antialiased; /* try to enable font smoothing*/
+    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-smoothing: antialiased; /* try to enable font smoothing*/
+    text-shadow: rgba(0,0,0,.01) 0 0 4px;
+        font-size: 20px;
+        line-height: 1.5em;
+}
+
+h1{
+    text-shadow:0.02em 0.02em 0.07em #ffffff !important;
+}
